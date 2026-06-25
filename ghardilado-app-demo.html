@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GharDilaDo - Premium Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0f111a;
+            --primary: #00f0ff;
+            --secondary: #7000ff;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Outfit', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; }
+        
+        /* Background Glows */
+        .glow-1 { position: fixed; top: -100px; left: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,240,255,0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; z-index: -1; }
+        .glow-2 { position: fixed; bottom: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(112,0,255,0.15) 0%, rgba(0,0,0,0) 70%); border-radius: 50%; z-index: -1; }
+
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(15, 17, 26, 0.7); backdrop-filter: blur(15px); z-index: 100; border-bottom: 1px solid var(--card-border); }
+        .logo { font-size: 1.8rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo span { color: var(--primary); }
+        .nav-links { display: flex; gap: 30px; font-weight: 500; color: var(--text-muted); }
+        .nav-links span:hover { color: var(--primary); cursor: pointer; transition: 0.3s; }
+        .nav-links span.active { color: var(--text-main); border-bottom: 2px solid var(--primary); }
+
+        /* Hero Section */
+        .hero { padding: 150px 5% 80px; text-align: center; }
+        .hero h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 40px; }
+        
+        /* Search Bar */
+        .search-container { max-width: 800px; margin: 0 auto; background: var(--card-bg); padding: 10px; border-radius: 60px; display: flex; align-items: center; border: 1px solid var(--card-border); box-shadow: 0 20px 40px rgba(0,0,0,0.4); backdrop-filter: blur(10px); }
+        .search-input { flex: 1; background: transparent; border: none; padding: 15px 30px; color: white; font-size: 1.1rem; outline: none; }
+        .search-btn { background: linear-gradient(45deg, var(--primary), var(--secondary)); color: white; border: none; padding: 15px 40px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: 0.3s; box-shadow: 0 0 20px rgba(0, 240, 255, 0.3); }
+        .search-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 25px rgba(0, 240, 255, 0.5); }
+
+        /* Properties Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 40px 5% 100px; }
+        .card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; overflow: hidden; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); backdrop-filter: blur(10px); cursor: pointer; }
+        .card:hover { transform: translateY(-10px); border-color: rgba(0, 240, 255, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(0, 240, 255, 0.1); }
+        .card-img { height: 240px; background-size: cover; background-position: center; position: relative; }
+        .badge { position: absolute; top: 20px; left: 20px; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); color: white; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.1); }
+        .badge.featured { background: linear-gradient(45deg, var(--secondary), var(--primary)); border: none; }
+        .card-content { padding: 30px; }
+        .price { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+        .title { font-size: 1.4rem; font-weight: 600; margin-bottom: 15px; color: white; }
+        .location { color: var(--text-muted); display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+        .features { display: flex; justify-content: space-between; border-top: 1px solid var(--card-border); padding-top: 20px; color: var(--text-muted); font-size: 0.95rem; }
+        .feature { display: flex; align-items: center; gap: 8px; }
+        .feature i { color: var(--primary); }
+
+        /* Back Button */
+        .back-btn { position: fixed; bottom: 30px; right: 30px; background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--card-border); color: white; padding: 15px 25px; border-radius: 30px; font-weight: 600; cursor: pointer; transition: 0.3s; z-index: 1000; display: flex; align-items: center; gap: 10px; }
+        .back-btn:hover { background: rgba(255,255,255,0.1); color: var(--primary); }
+    </style>
+</head>
+<body>
+    <div class="glow-1"></div>
+    <div class="glow-2"></div>
+
+    <nav>
+        <div class="logo">GharDilaDo<span>.</span></div>
+        <div class="nav-links">
+            <span class="active">Buy</span>
+            <span>Rent</span>
+            <span>Sell</span>
+            <span>Agents</span>
+        </div>
+        <button class="back-btn" style="position: static; padding: 10px 20px; font-size: 0.9rem;">
+            <i class="fa-regular fa-user"></i> Sign In
+        </button>
+    </nav>
+
+    <div class="hero">
+        <h1>Discover Your Premium<br>Dream Home</h1>
+        <p>Explore the most exclusive real estate properties with advanced virtual tours and seamless booking experiences.</p>
+        <div class="search-container">
+            <i class="fa-solid fa-location-dot" style="margin-left:20px; color:var(--text-muted); font-size:1.2rem;"></i>
+            <input type="text" class="search-input" placeholder="Search by city, neighborhood, or zip code...">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Explore</button>
+        </div>
+    </div>
+
+    <div class="grid">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800');">
+                <div class="badge featured"><i class="fa-solid fa-star"></i> Featured</div>
+            </div>
+            <div class="card-content">
+                <div class="price">₹4.5 Cr</div>
+                <h3 class="title">Skyline Luxury Penthouse</h3>
+                <div class="location"><i class="fa-solid fa-map-location-dot"></i> Worli Sea Face, Mumbai</div>
+                <div class="features">
+                    <div class="feature"><i class="fa-solid fa-bed"></i> 4 Beds</div>
+                    <div class="feature"><i class="fa-solid fa-bath"></i> 4 Baths</div>
+                    <div class="feature"><i class="fa-solid fa-vector-square"></i> 3,200 sqft</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800');">
+                <div class="badge">For Sale</div>
+            </div>
+            <div class="card-content">
+                <div class="price">₹2.1 Cr</div>
+                <h3 class="title">Modern Glass Villa</h3>
+                <div class="location"><i class="fa-solid fa-map-location-dot"></i> Koregaon Park, Pune</div>
+                <div class="features">
+                    <div class="feature"><i class="fa-solid fa-bed"></i> 3 Beds</div>
+                    <div class="feature"><i class="fa-solid fa-bath"></i> 3 Baths</div>
+                    <div class="feature"><i class="fa-solid fa-vector-square"></i> 2,400 sqft</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800');">
+                <div class="badge">Just Listed</div>
+            </div>
+            <div class="card-content">
+                <div class="price">₹85 L</div>
+                <h3 class="title">Minimalist Smart Apartment</h3>
+                <div class="location"><i class="fa-solid fa-map-location-dot"></i> Whitefield, Bangalore</div>
+                <div class="features">
+                    <div class="feature"><i class="fa-solid fa-bed"></i> 2 Beds</div>
+                    <div class="feature"><i class="fa-solid fa-bath"></i> 2 Baths</div>
+                    <div class="feature"><i class="fa-solid fa-vector-square"></i> 1,100 sqft</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="window.close()" class="back-btn">
+        <i class="fa-solid fa-arrow-left"></i> Return to Portfolio
+    </button>
+</body>
+</html>
