@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #00f0ff;
+  --color-brand-secondary: #7000ff;
+  --color-brand-accent: #0072ff;
+  --color-bg-base: #030712;
+  --color-glass-surface: rgba(255, 255, 255, 0.02);
+  --color-glass-hover: rgba(255, 255, 255, 0.04);
+  
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  
+  --animate-spin-slow: spin 15s linear infinite;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-base);
+    color: #f3f4f6; /* text-gray-100 */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@utility glass-card {
+  background-color: var(--color-glass-surface);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  
+  &:hover {
+    background-color: var(--color-glass-hover);
+    transform: translateY(-0.25rem);
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 240, 255, 0.08);
+  }
+}
