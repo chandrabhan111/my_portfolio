@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 
 export default function Hero() {
   return (
@@ -35,13 +35,25 @@ export default function Hero() {
             I build scalable backend systems, APIs, and seamless mobile app integrations that power modern digital experiences.
           </p>
 
-          <a
-            href="#projects"
-            className="group px-8 py-3 bg-gradient-to-br from-brand-primary to-brand-accent text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3"
-          >
-            <span>View Projects</span>
-            <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
-          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href="#projects"
+              className="group px-8 py-3 bg-gradient-to-br from-brand-primary to-brand-accent text-black font-bold rounded-lg hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3"
+            >
+              <span>View Projects</span>
+              <FaArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
+            </a>
+
+            <a
+              href="https://wa.me/916378091973?text=Hi%20Chandrabhan,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group px-8 py-3 bg-white/5 border border-white/10 text-white font-bold rounded-lg hover:bg-[#25D366]/20 hover:border-[#25D366]/50 hover:text-[#25D366] hover:shadow-[0_0_20px_rgba(37,211,102,0.2)] hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3"
+            >
+              <FaWhatsapp className="text-xl text-[#25D366] group-hover:scale-110 transition-transform duration-300" />
+              <span>WhatsApp Me</span>
+            </a>
+          </div>
         </motion.div>
 
         {/* Right: Image Wrapper */}
