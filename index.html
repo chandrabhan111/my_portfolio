@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandrabhan Singh Solanki | Backend Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Chandrabhan Singh Solanki, a Backend Developer specializing in Node.js, Express, MongoDB, Firebase, and React Native integrations.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=2.0">
+</head>
+<body>
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#hero" class="logo">CS<span>.</span></a>
+            <nav class="navbar" id="navbar">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#stats" class="nav-link">Stats</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="server-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">API: <span id="api-latency">34ms</span></span>
+                </div>
+                <a href="assets/Chandrabhan_Singh_Solanki_Resume.pdf" download class="btn-nav">Download CV</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge animate-reveal">Available for Freelance & Full-time</div>
+                    <h1 class="hero-title animate-reveal">
+                        Hi, I'm <span class="gradient-text">Chandrabhan Singh Solanki</span>
+                    </h1>
+                    <h2 class="hero-subtitle animate-reveal">
+                        Backend Developer | Node.js | React Native
+                    </h2>
+                    <p class="hero-description animate-reveal">
+                        I build scalable backend systems, APIs, and seamless mobile app integrations that power modern digital experiences.
+                    </p>
+                    <div class="hero-ctas animate-reveal">
+                        <a href="#projects" class="btn btn-primary glow-btn">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper animate-reveal">
+                    <div class="image-bg-glow"></div>
+                    <div class="image-frame">
+                        <img src="assets/developer.jpg" alt="Chandrabhan Singh Solanki - Backend Developer" class="hero-img">
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down" aria-label="Scroll to About Me">
+                <div class="mouse-icon">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="section-header animate-reveal">
+                    <span class="section-tagline">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card glass-card animate-reveal">
+                        <div class="card-glow"></div>
+                        <h3 class="about-heading">Building Powerful Digital Engines</h3>
+                        <p class="about-text">
+                            I am a passionate Backend Developer with a deep interest in crafting scalable, efficient, and robust architecture. Over my career journey, I have specialized in designing performance-driven backend systems using <strong class="highlight-text">Node.js</strong> and <strong class="highlight-text">Express.js</strong>, integrating highly responsive databases like <strong class="highlight-text">MongoDB</strong>, and implementing reliable backend-as-a-service platforms like <strong class="highlight-text">Firebase</strong>.
+                        </p>
+                        <p class="about-text">
+                            My expertise doesn't stop at the server side; I also build cross-platform mobile experiences with <strong class="highlight-text">React Native</strong>. This full-stack awareness enables me to build APIs that are perfectly tailored for high-speed client integrations, ensuring secure and seamless data flows.
+                        </p>
+                        <div class="tech-badges">
+                            <span class="tech-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                            <span class="tech-badge"><i class="fa-solid fa-server"></i> Express.js</span>
+                            <span class="tech-badge"><i class="fa-solid fa-database"></i> MongoDB</span>
+                            <span class="tech-badge"><i class="fa-solid fa-fire"></i> Firebase</span>
+                            <span class="tech-badge"><i class="fa-brands fa-react"></i> React Native</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="container">
+                <div class="section-header animate-reveal">
+                    <span class="section-tagline">My Toolkit</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                </div>
+                <div class="skills-grid">
+                    <!-- Backend Skills -->
+                    <div class="skills-category-card glass-card animate-reveal">
+                        <div class="category-header">
+                            <div class="category-icon icon-blue"><i class="fa-solid fa-gears"></i></div>
+                            <h3>Backend Core</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="90%"></div>
+                                    <span class="tooltip-text">Server-side JavaScript runtime for scalable APIs.</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Express.js</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="85%"></div>
+                                    <span class="tooltip-text">Used for Custom Middleware, Rate Limiting, & API Routing.</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>REST APIs</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="95%"></div>
+                                    <span class="tooltip-text">Designing stateless, high-performance API endpoints.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Database Skills -->
+                    <div class="skills-category-card glass-card animate-reveal">
+                        <div class="category-header">
+                            <div class="category-icon icon-purple"><i class="fa-solid fa-database"></i></div>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MongoDB</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="80%"></div>
+                                    <span class="tooltip-text">NoSQL document database for flexible schemas.</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Firebase</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="85%"></div>
+                                    <span class="tooltip-text">Real-time sync, auth, and serverless functions.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Security -->
+                    <div class="skills-category-card glass-card animate-reveal">
+                        <div class="category-header">
+                            <div class="category-icon icon-green"><i class="fa-solid fa-toolbox"></i></div>
+                            <h3>Tools & Security</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JWT (JSON Web Token)</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="90%"></div>
+                                    <span class="tooltip-text">Secure stateless user authentication.</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>GitHub & Version Control</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="85%"></div>
+                                    <span class="tooltip-text">Collaborative code management & CI/CD.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile & AI Media -->
+                    <div class="skills-category-card glass-card animate-reveal">
+                        <div class="category-header">
+                            <div class="category-icon icon-neon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <h3>Mobile & AI Media</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React Native</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="75%"></div>
+                                    <span class="tooltip-text">Cross-platform mobile app development.</span>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Product AI UGC Ads</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar-container tooltip-container">
+                                    <div class="progress-bar" data-progress="90%"></div>
+                                    <span class="tooltip-text">Creating highly engaging AI Product UGC Ads for clients to scale their marketing on-demand.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section-padding">
+            <div class="container">
+                <div class="section-header animate-reveal">
+                    <span class="section-tagline">My Creations</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1: GharDilaDo -->
+                    <div class="project-card glass-card animate-reveal">
+                        <div class="project-img-placeholder">
+                            <div class="img-overlay"></div>
+                            <i class="fa-solid fa-house-chimney project-icon"></i>
+                            <div class="project-status">Live Project</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">GharDilaDo</h3>
+                            <p class="project-description">
+                                A high-performance real estate mobile platform that simplifies property finding. Engineered a secure, scalable backend with high-speed search queries, custom filtering algorithms, and interactive client maps.
+                            </p>
+                            <div class="project-architecture">
+                                <span class="arch-node">React Native Client</span> <i class="fa-solid fa-arrow-right arch-arrow"></i>
+                                <span class="arch-node">JWT Auth</span> <i class="fa-solid fa-arrow-right arch-arrow"></i>
+                                <span class="arch-node">Express API</span> <i class="fa-solid fa-arrow-right arch-arrow"></i>
+                                <span class="arch-node">MongoDB</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express.js</span>
+                                <span class="tag">MongoDB</span>
+                                <span class="tag">React Native</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="ghardilado-app-demo.html" target="_blank" class="btn btn-sm btn-primary">
+                                    <span>Live Demo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="https://github.com/chandrabhan111/GharDilaDo.git" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: LibraryHub -->
+                    <div class="project-card glass-card animate-reveal">
+                        <div class="project-img-placeholder icon-purple-bg">
+                            <div class="img-overlay"></div>
+                            <i class="fa-solid fa-book-bookmark project-icon"></i>
+                            <div class="project-status">Featured System</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">LibraryHub</h3>
+                            <p class="project-description">
+                                An automated library seat booking application designed to manage student reservations dynamically. Implemented real-time seat tracking updates, queue management, and automated booking notifications.
+                            </p>
+                            <div class="project-architecture">
+                                <span class="arch-node">Web Client</span> <i class="fa-solid fa-arrow-right arch-arrow"></i>
+                                <span class="arch-node">Node.js Core</span> <i class="fa-solid fa-arrow-right arch-arrow"></i>
+                                <span class="arch-node">Firebase DB</span> <i class="fa-solid fa-arrow-right arch-arrow"></i>
+                                <span class="arch-node">Seat Sync</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Express.js</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">JWT Auth</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="libraryhub-app-demo.html" target="_blank" class="btn btn-sm btn-primary">
+                                    <span>Live Demo</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                                <a href="https://github.com/chandrabhan111/Library-App.git" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fa-brands fa-github"></i> <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Highlights -->
+        <section id="experience" class="experience-section section-padding">
+            <div class="container">
+                <div class="section-header animate-reveal">
+                    <span class="section-tagline">My Journey</span>
+                    <h2 class="section-title">Experience Highlights</h2>
+                </div>
+                <div class="experience-timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-item glass-card animate-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">1+ Year Experience</div>
+                        <div class="timeline-content">
+                            <h3>Full-Stack & Backend Systems Developer</h3>
+                            <p>Architecting production-ready backend codebases, handling API routing systems, implementing robust security protocols, and managing data modeling pipelines.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-item glass-card animate-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Core Skill</div>
+                        <div class="timeline-content">
+                            <h3>API Design & Optimization</h3>
+                            <p>Designing RESTful endpoints with micro-second latency, structured query parameters, unified error handlers, and performance-optimized database aggregation pipelines.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-item glass-card animate-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Core Skill</div>
+                        <div class="timeline-content">
+                            <h3>Secure Authentication Systems</h3>
+                            <p>Integrating robust user authentication and authorization layers using JSON Web Tokens (JWT), session cookies, encrypted password schemas (bcrypt), and Firebase Auth patterns.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="timeline-item glass-card animate-reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Architecture</div>
+                        <div class="timeline-content">
+                            <h3>Scalable Systems Architecture</h3>
+                            <p>Structuring clean code bases using MVC/layered architectures, setting up automated data backups, and configuring highly optimized connection pools for MongoDB.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="stats-section section-padding">
+            <div class="container stats-container">
+                <div class="stat-card glass-card animate-reveal">
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card glass-card animate-reveal">
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label">Year Experience</div>
+                </div>
+                <div class="stat-card glass-card animate-reveal">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Dedication</div>
+                </div>
+                <div class="stat-card glass-card animate-reveal">
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">Fast API Performance (%)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="section-header animate-reveal">
+                    <span class="section-tagline">Let's Connect</span>
+                    <h2 class="section-title">Contact Me</h2>
+                </div>
+                <div class="contact-grid">
+                    <!-- Info Column -->
+                    <div class="contact-info-card glass-card animate-reveal">
+                        <h3>Get In Touch</h3>
+                        <p>Feel free to reach out for project collaboration, job opportunities, or just a quick technical chat about backend architecture!</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="detail-text">
+                                    <span>Email Me</span>
+                                    <a href="mailto:chandrabhanghar@gmail.com">chandrabhanghar@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="detail-text">
+                                    <span>Call Me</span>
+                                    <a href="tel:+916378091973">+91 6378091973</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-text">
+                                    <span>Location</span>
+                                    <p>Jaipur, Rajasthan, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Column -->
+                    <div class="contact-form-card glass-card animate-reveal">
+                        <h3>Send a Message</h3>
+                        <form id="portfolio-contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required placeholder="Project Discussion">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required rows="5" placeholder="Let's build something awesome..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary glow-btn form-submit-btn">
+                                <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="form-feedback" class="form-feedback hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <a href="#hero" class="logo">CS<span>.</span></a>
+                <p>&copy; 2026 Chandrabhan Singh Solanki. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://github.com/chandrabhan111" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="footer-build">Built with HTML, CSS, JS</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
