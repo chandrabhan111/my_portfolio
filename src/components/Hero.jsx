@@ -28,11 +28,11 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-xl sm:text-2xl font-medium text-gray-300 mb-6">
-            Backend Developer | Node.js | React Native
+            Software Developer | Web Apps | AI Products | Freelancer
           </h2>
 
           <p className="text-base sm:text-lg text-gray-400 max-w-lg mb-8 leading-relaxed">
-            I build scalable backend systems, APIs, and seamless mobile app integrations that power modern digital experiences.
+            I build modern websites, intelligent AI products, high-converting UGC Ads, and provide complete freelance tech solutions to power your digital growth.
           </p>
 
           <div className="flex flex-wrap items-center gap-4">

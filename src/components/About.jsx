@@ -7,7 +7,7 @@ export default function About() {
     { name: 'Express.js', icon: SiExpress },
     { name: 'MongoDB', icon: SiMongodb },
     { name: 'Firebase', icon: SiFirebase },
-    { name: 'React Native', icon: SiReact },
+    { name: 'React.js', icon: SiReact },
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function About() {
             </p>
             
             <p className="text-gray-400 mb-10 leading-relaxed">
-              My expertise doesn't stop at the server side; I also build cross-platform mobile experiences with <strong className="text-white">React Native</strong>. This full-stack awareness enables me to build APIs that are perfectly tailored for high-speed client integrations, ensuring secure and seamless data flows.
+              My expertise doesn't stop at the server side; I am a complete digital solutions provider. From crafting responsive <strong className="text-white">React.js</strong> web applications, building intelligent <strong className="text-white">AI products</strong>, managing high-converting <strong className="text-white">UGC ads</strong>, to full-stack freelancing — I do whatever it takes to deliver impactful digital experiences.
             </p>
 
             {/* Tech Badge Grid */}

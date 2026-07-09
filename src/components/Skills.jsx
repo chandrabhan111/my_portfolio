@@ -33,11 +33,11 @@ export default function Skills() {
       ],
     },
     {
-      title: 'Mobile & AI Media',
+      title: 'Web & AI Media',
       icon: FaWandMagicSparkles,
       colorClass: 'text-blue-400 bg-blue-500/10',
       skills: [
-        { name: 'React Native', percentage: '75%', desc: 'Cross-platform mobile app development.' },
+        { name: 'React.js', percentage: '80%', desc: 'Modern and responsive web application development.' },
         { name: 'Product AI UGC Ads', percentage: '90%', desc: 'Creating highly engaging AI Product UGC Ads for clients to scale their marketing on-demand.' },
       ],
     },
