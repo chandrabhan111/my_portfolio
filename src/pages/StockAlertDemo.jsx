@@ -31,7 +31,7 @@ export default function StockAlertDemo() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "b0b97f0a-6cfa-4045-bfaf-f93d40ec4da2", // Using the access key from existing Contact.jsx
+          access_key: "8c7647fd-5869-4958-89c5-300b3f2c402a", // Correct user key
           subject: `New Lead: AI Stock Alert System from ${formData.businessName}`,
           ...formData
         })
