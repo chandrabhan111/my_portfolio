@@ -12,9 +12,20 @@
     <meta property="og:image" content="https://chandrabhan111.github.io/my_portfolio/og_banner.png" />
     <meta property="og:url" content="https://chandrabhan111.github.io/my_portfolio/" />
     <meta property="og:type" content="website" />
+    <!-- n8n Chatbot CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Chatbot Integration -->
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://chandrabhan011.app.n8n.cloud/webhook/d7d25392-fdf2-4947-a6fd-6c203ba05890/chat'
+        });
+    </script>
   </body>
 </html>
