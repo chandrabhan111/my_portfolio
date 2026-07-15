@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css?v=2.0">
+    <!-- n8n Chatbot CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Ambient Background Glows -->
@@ -494,5 +496,14 @@
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <!-- Chatbot Integration -->
+<script type="module">
+    import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+    createChat({
+        webhookUrl: 'https://chandrabhan011.app.n8n.cloud/webhook/d7d25392-fdf2-4947-a6fd-6c203ba05890/chat'
+    });
+      
+</script>
 </body>
 </html>
